@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<POSLog>
+    <Transaction>
+        <TransactionHeader>
+            <RetailStoreID >1001</RetailStoreID>
+            <WorkstationID>POS001</WorkstationID>
+            <OperatorID>12345</OperatorID>
+            <TransactionSequenceID>56789</TransactionSequenceID>
+            <BusinessDayDate>2025-03-18</BusinessDayDate>
+            <BeginDateTime>2025-03-18T10:15:30</BeginDateTime>
+        </TransactionHeader>
+        <RetailTransaction>
+            <LineItem>
+                <Sale>
+                    
+                    
+                    
+                    <ItemID>SKU123456</ItemID>
+                    <Description>Wireless Mouse</Description>
+                    <Quantity>1</Quantity>
+                    <RegularSalesUnitPrice>25.99</RegularSalesUnitPrice>
+                    <ExtendedAmount>25.99</ExtendedAmount>
+                </Sale>
+            </LineItem>
+            <LineItem>
+                <Sale>
+                    <ItemID>SKU654321</ItemID>
+                    <Description>Mechanical Keyboard</Description>
+                    <Quantity>1</Quantity>
+                    <RegularSalesUnitPrice>89.99</RegularSalesUnitPrice>
+                    <ExtendedAmount>89.99</ExtendedAmount>
+                </Sale>
+            </LineItem>
+        </RetailTransaction>
+        <Payment>
+            <Tender>
+                <TenderType>CreditCard</TenderType>
+                <Amount>115.98</Amount>
+            </Tender>
+        </Payment>
+        <TransactionTrailer>
+            <Total>
+                <Amount>115.98</Amount>
+            </Total>
+        </TransactionTrailer>
+    </Transaction>
+</POSLog>
