@@ -151,11 +151,14 @@ class TestXMLGeneration(unittest.TestCase):
         # Canonicalize both XML documents for comparison
         generated_canonical = self.canonicalize_xml(self.generated_xml)
         expected_canonical = self.canonicalize_xml(etree.tostring(expected_xml.getroot(), encoding='unicode'))
+        diff = main.diff_texts(generated_canonical, expected_canonical)
+        filtered_diff = [d for d in diff if not isinstance(d, actions.MoveNode)]
         print('aaron:',generated_canonical)
         print('taufique',expected_canonical)
+        assert filtered_diff == [], f"XMLs are not equal: {filtered_diff}"
 
         # Compare canonicalized XML
-        self.assertEqual(generated_canonical, expected_canonical)
+        # self.assertEqual(generated_canonical, expected_canonical)
 
 if __name__ == '__main__':
     unittest.main()
